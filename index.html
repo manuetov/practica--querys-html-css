@@ -35,30 +35,18 @@
    </button>
 
    <script>
-      var navBtn = document.getElementsByClassName("navBtn");
-      var sideNav = document.getElementById("sideNav");
+      const navBtn = document.getElementById("navBtn");
+      const sideNav = document.getElementById("sideNav");
 
-      sideNav.style.left = "-10px";
-      navBtn.onclick = () => {
+      sideNav.style.left = "-1000px";
+      navBtn.onclick = function () {
+         console.log('lanzamos onclick');
          if (sideNav.style.left == "-1000px") {
-            sideNav.style.left = "-10px";
+            sideNav.style.left = "10px";
          } else {
             sideNav.style.left = "-1000px";
          }
       }
-
-      // sideNav.style.display = "none";
-      // navBtn.onclick = () => {
-      //    if(sideNav.style.display = "none") {
-      //       sideNav.style.display = "block"
-      //    } else {
-      //       sideNav.style.display = "none"
-      //    }
-
-         // sideNav.style.display = "none"
-         // while(navBtn.onmouseover) {
-         //    sideNav.style.display = "block"
-         // } 
    </script>
 
    <header>
@@ -218,20 +206,4 @@
 </html>
 
 
-
-<!-- <button class="nav-btn open-btn">
-   <i class="fas fa-bars"></i>
-</button>
-<div class="nav-hamburger visible">
-   <ul>
-      <button class="nav-btn close-btn">
-         <i class="fas fa-times"></i>
-      </button>
-      <a href="/" class="logo"><img src="./img/logo-deco.png" alt="marca"></a>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#nosotros">nosostros</a></li>
-      <li><a href="#galeria">galeria</a></li>
-      <li><a href="#contacto">contacto</a></li>
-   </ul>
-</div> -->
 
