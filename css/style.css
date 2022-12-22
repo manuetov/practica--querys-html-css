@@ -142,9 +142,8 @@ nav .logo {
 
 #navBtn {
    display: none;
-   position: fixed;
    left: 3px;
-   top: 5px;
+   top: 0px;
    z-index: 2;
    cursor: pointer;
 }
