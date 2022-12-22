@@ -15,7 +15,9 @@ body {
    line-height: 1.8rem;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
    font-weight: 900;
    margin: 2rem 0 2rem 0;
 }
@@ -44,6 +46,60 @@ h3 {
    background-color: var(--azul-hover);
 }
 
+/* ------------------ MAIN-estructura  */
+.wrapper {
+   display: flex;
+}
+
+main {
+   margin: 0 auto;
+   width: 70%;
+}
+
+#contacto {
+   background-color: #621c1a;
+}
+
+aside {
+   width: 25%;
+   background-color: #284923;
+   margin: 0 auto;
+}
+
+body {
+   background-color: #858585;
+}
+
+/* ------------------ HEADER */
+
+header {
+   background-image: url(../img/hero.jpg);
+   background-size: cover;
+   min-height: 60vh;
+   margin-bottom: 10px;
+   justify-content: center;
+   text-align: center;
+}
+
+.slogan {
+   background-color: rgba(255 255 255 / .5);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /* vertical-align: bottom; */
+   width: 50%;
+   margin: 0 auto;
+   line-height: 3rem;
+   position: absolute;
+   left: 25%;
+   top: 25%;
+}
+
+.btn-contact {
+   position: absolute;
+   left: 45%;
+   top: 55%
+}
 
 /* ----------------- NAV */
 
@@ -65,7 +121,7 @@ nav .logo {
    align-self: center;
 }
 
-nav ul {
+#navbar {
    display: flex;
    list-style: none;
    gap: 2rem;
@@ -73,72 +129,29 @@ nav ul {
    font-size: 1.4rem;
 }
 
-nav ul li a:hover {
+#navbar a:hover {
    background-color: rgba(255, 255, 255, 0.8);
    color: var(--azul-hover);
    border-radius: 5px;
 }
 
-.open-btn {
-   position: fixed;
-   float: right;
-}
-
-/* ------------------ HEADER */
-
-header {
-   background-image: url(../img/hero.jpg);
-   background-size: cover;
-   min-height: 60vh;
-   margin-bottom: 10px;
-   justify-content: center;
-   text-align: center;
-}
-
-.slogan {
-   background-color: rgba(255 255 255 / .5);
-   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-   width: 50%;
-   margin: 0 auto;
-   line-height: 3rem;
-}
-
-header .btn {
-   margin: 50px;
-}
-
-/* ------------------ MAIN-estructura  */
-.wrapper {
-   display: flex;
-}
-
-main {
-   margin: 0 auto;
-   width: 70%;
-}
-
-#contacto {
-   background-color: rgb(110, 19, 19, .2);
-}
-
-aside {
-   width: 25%;
-   background-color: rgb(1, 55, 1, .2);
-   margin: 0 auto;
-}
-
-.nav-btn {
+/* ------ hamburger nav menu */
+#sideNav {
    display: none;
 }
 
-#menu:hover>li {
-   display: flex;
-   flex-direction: column;
+#navBtn {
+   display: none;
+   position: fixed;
+   left: 3px;
+   top: 5px;
+   z-index: 2;
+   cursor: pointer;
 }
 
-@media screen and (max-width: 700px) {
+/* ------------ @QUERIES => ESTRUCTURA + NAV */
+
+@media screen and (max-width: 900px) {
    .wrapper {
       flex-direction: column;
    }
@@ -148,14 +161,44 @@ aside {
       width: 98%;
    }
 
-   .nav-btn {
+   .slogan {
+      left: 0px;
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   #navBtn {
       display: block;
    }
 
-   nav ul li {
+   #navbar {
       display: none;
    }
+
+   #sideNav {
+      display: block;
+      list-style: none;
+      padding-top: 10px;
+      margin-top: 50px;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      /* left: -700px;  */
+      /* position: fixed; */
+      z-index: 2;
+      transition: 0.5ms;
+      background-color: #33E2FF;
+      line-height: 3rem;
+   }
+
+   #sideNav li a:hover {
+      background-color: var(--gris);
+      color: var(--blanco)
+   }
 }
+
+;
 
 /* -------------------- GALERIA - MAIN*/
 /* photos */
@@ -202,11 +245,6 @@ aside .imagen img {
    margin: 2rem 0;
    border-radius: 5px;
    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.493);
-
-
-   /* display: flex;
-   flex-direction: column;
-   align-self: center; */
 }
 
 /* -------------------- CONTACTO - MAIN*/
@@ -258,6 +296,7 @@ input,
 textarea {
    width: 90%;
    padding: 5px;
+   background-color: #7c7c7c;
 }
 
 @media (max-width: 1100px) {
@@ -289,7 +328,6 @@ button:hover {
 
 .footer {
    color: var(--blanco);
-
 }
 
 .copyright {
@@ -301,15 +339,23 @@ button:hover {
    padding: 1rem;
 }
 
+.icons {
+   display: flex;
+   justify-content: center;
+}
+
 .icons i {
-   font-size: 24px;
-   margin: 0px 4px;
+   font-size: 30px;
+   margin: 0px 10px;
 }
 
 
 
-
 /* ------------------ nav hamburger */
+/* .open-btn {
+   /* position: fixed; 
+   float: right;
+} */
 /* .nav-hamburger {
    position: fixed;
    top: 0;
@@ -332,5 +378,8 @@ button:hover {
    top: 10px;
    right: 60px;
 } */
+
+
+
 
 

@@ -13,11 +13,16 @@
 
 <body>
    <nav>
-      <a href="/" class="logo"><img src="./img/logo-deco.png" alt="marca"></a>
-      <ul id="menu">
-         <button class="nav-btn">
-            <i class="fas fa-bars"></i>
-         </button>
+      <a href="/" class="logo">
+         <img src="./img/logo-deco.png" alt="marca">
+      </a>
+      <ul id="navbar">
+         <li><a href="#home">Home</a></li>
+         <li><a href="#nosotros">nosostros</a></li>
+         <li><a href="#galeria">galeria</a></li>
+         <li><a href="#contacto">contacto</a></li>
+      </ul>
+      <ul id="sideNav">
          <li><a href="#home">Home</a></li>
          <li><a href="#nosotros">nosostros</a></li>
          <li><a href="#galeria">galeria</a></li>
@@ -25,12 +30,43 @@
       </ul>
    </nav>
 
+   <button id="navBtn">
+      <i class="fas fa-bars"></i>
+   </button>
+
+   <script>
+      var navBtn = document.getElementsByClassName("navBtn");
+      var sideNav = document.getElementById("sideNav");
+
+      sideNav.style.left = "-10px";
+      navBtn.onclick = () => {
+         if (sideNav.style.left == "-1000px") {
+            sideNav.style.left = "-10px";
+         } else {
+            sideNav.style.left = "-1000px";
+         }
+      }
+
+      // sideNav.style.display = "none";
+      // navBtn.onclick = () => {
+      //    if(sideNav.style.display = "none") {
+      //       sideNav.style.display = "block"
+      //    } else {
+      //       sideNav.style.display = "none"
+      //    }
+
+         // sideNav.style.display = "none"
+         // while(navBtn.onmouseover) {
+         //    sideNav.style.display = "block"
+         // } 
+   </script>
+
    <header>
       <div class="slogan">
          <h1>Las mejores casas de madera</h1>
          <h2>Construimos la casa de tus sueños!!!</h2>
       </div>
-      <button class="btn"> <a href="#contacto">Contáctanos</a> </button>
+      <button class="btn-contact"> <a href="#contacto">Contáctanos</a> </button>
 
    </header>
 
@@ -47,15 +83,15 @@
                   Id debitis doloremque unde, magni quod minus numquam
                   nemo mollitia sit. Optio doloremque temporibus aperiam
                   vitae ipsa vel officiis nesciunt iusto enim.</p>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                  Cupiditate laboriosam velit optio! Excepturi molestiae 
-                  eligendi accusantium accusamus voluptatum, saepe ipsam 
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Cupiditate laboriosam velit optio! Excepturi molestiae
+                  eligendi accusantium accusamus voluptatum, saepe ipsam
                   esse nesciunt, repellendus, error at.</p>
             </article>
          </section>
          <!-- ------------------ GALERIA -->
          <section id="galeria">
-            <h3>Galería</h3>
+            <h3>Nuestros Trabajos</h3>
             <article class="photos">
                <div class="imagen">
                   <img src="img/imagen_1.jpg" alt="imagen galeria">
@@ -161,27 +197,22 @@
    <!-- FOOTER -->
    <footer class="footer">
       <hr>
-      <nav>
-         <a href="/" class="logo"><img src="./img/logo-deco.png" alt="marca"></a>
-         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#nosotros">nosostros</a></li>
-            <li><a href="#galeria">galeria</a></li>
-            <li><a href="#contacto">contacto</a></li>
-         </ul>
-      </nav>
+      <div class="icons">
+         <a href="https://www.linkedin.com/in/manuetov/" target="_blank" rel="noopener"><i
+               class="fa-brands fa-linkedin "></i></a>
+         <a href="https://www.instagram.com" target="_blank" rel="noopener"><i
+               class="fa-brands fa-square-instagram "></i></a>
+         <a href="https://www.twitter.com" target="_blank" rel="noopener"> <i class="fa-brands fa-twitter "></i></a>
+      </div>
       <div class="copyright">
          <p>copyright @2022 all right reserved
             <span>❤</span> by <span>The-Bridge</span>
          </p>
-
-         <div class="icons">
-            <i class="fa-brands fa-linkedin "></i>
-            <i class="fa-brands fa-square-instagram "></i>
-            <i class="fa-brands fa-twitter "></i>
-         </div>
       </div>
+
    </footer>
+
+   <script src="./script.js"></script>
 </body>
 
 </html>
@@ -203,3 +234,4 @@
       <li><a href="#contacto">contacto</a></li>
    </ul>
 </div> -->
+
